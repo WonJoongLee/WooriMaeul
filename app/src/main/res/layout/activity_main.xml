@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/floralwhite"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <LinearLayout
         android:id="@+id/main_topLinear"
