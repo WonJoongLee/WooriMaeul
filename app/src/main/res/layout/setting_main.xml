@@ -9,32 +9,62 @@
 
     <LinearLayout
         android:id="@+id/login"
-        android:layout_width="337dp"
+        android:layout_width="150dp"
         android:layout_height="55dp"
-        android:layout_marginTop="108dp"
-        android:background="@drawable/main_board_custom"
-        android:clickable="true"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/round_rectangle"
         android:focusable="true"
-        android:foreground="@drawable/selectable_background"
+        android:foreground="@drawable/round_rectangle"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
         <TextView
-            android:layout_width="343dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
             android:text="로그인"
-            android:textColor="@color/black"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="30sp" />
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:id="@+id/set"
+        android:id="@+id/login_button"
+        android:layout_width="355dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="320dp"
+        android:background="@android:color/holo_blue_light"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/round_rectangle"
+
+        android:gravity="center"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_blue_light"
+            android:fontFamily="@font/jalnan"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/upper_bar"
         android:layout_width="415dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
@@ -53,7 +83,7 @@
             android:layout_marginTop="0dp"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
-            android:text="설정"
+            android:text="로그인 및 설정"
 
             android:textColor="@color/white"
             android:textSize="30sp">
@@ -65,7 +95,7 @@
         android:id="@+id/sign-up"
         android:layout_width="337dp"
         android:layout_height="55dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="428dp"
         android:background="@drawable/main_board_custom"
         android:clickable="true"
         android:focusable="true"
@@ -87,10 +117,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/etc"
+        android:id="@+id/settings"
         android:layout_width="337dp"
         android:layout_height="55dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="520dp"
         android:background="@drawable/main_board_custom"
         android:clickable="true"
         android:focusable="true"
@@ -105,7 +135,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
-            android:text="기타"
+            android:text="설정"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
@@ -151,16 +181,16 @@
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:background="@android:color/holo_blue_light"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
         app:itemIconTint="#000000"
         app:itemTextColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_menu"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="626dp"/>
+        tools:layout_editor_absoluteY="626dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
