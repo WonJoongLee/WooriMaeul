@@ -48,30 +48,29 @@
             android:foreground="@drawable/selectable_background"/>
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/board_emergency"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/main_emergency_custom"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear"
         android:clickable="true"
         android:focusable="true"
         android:foreground="@drawable/selectable_background"
-        >
+        android:orientation="vertical"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
-            android:text="긴급게시판"
+            android:text="홍보게시판"
             android:textColor="@color/black"
             android:textSize="30sp" />
 
@@ -85,52 +84,15 @@
             android:text=""
             android:textColor="@color/slategray"
             android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/board_free"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/main_board_custom"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/board_emergency"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/selectable_background"
-        >
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="자유게시판"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/jalnan"
-            android:text=" "
-            android:textColor="@color/slategray"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/jalnan"
-            android:text=" "
+            android:text=""
             android:textColor="@color/slategray"
             android:textSize="18sp" />
 
@@ -141,55 +103,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/jalnan"
-            android:text=" "
-            android:textColor="@color/slategray"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/board_ad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/main_board_custom"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/board_free"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/selectable_background"
-        >
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="홍보게시판"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/jalnan"
-            android:text=" "
-            android:textColor="@color/slategray"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/jalnan"
-            android:text=" "
+            android:text=""
             android:textColor="@color/slategray"
             android:textSize="18sp" />
 
@@ -200,55 +114,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/jalnan"
-            android:text=" "
-            android:textColor="@color/slategray"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/board_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/main_board_custom"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/board_ad"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/selectable_background"
-        >
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="정보게시판"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/jalnan"
-            android:text=" "
-            android:textColor="@color/slategray"
-            android:textSize="18sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/jalnan"
-            android:text=" "
+            android:text=""
             android:textColor="@color/slategray"
             android:textSize="18sp" />
 
@@ -259,9 +125,123 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/jalnan"
-            android:text=" "
+            android:text=""
             android:textColor="@color/slategray"
             android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/jalnan"
+            android:text=""
+            android:textColor="@color/slategray"
+            android:textSize="18sp" />
+
+        <ImageButton
+
+            android:layout_width="46dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/floralwhite"
+            android:foreground="@drawable/selectable_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pictogram_user" />
+
+
+
+
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
