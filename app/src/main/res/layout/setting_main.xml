@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/floralwhite">
 
 
     <LinearLayout
@@ -39,8 +39,8 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="이메일"
-        android:textColorHint="#585c61"
         android:inputType="textEmailAddress"
+        android:textColorHint="#585c61"
         app:layout_constraintBottom_toTopOf="@+id/login_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,8 +52,8 @@
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="비밀번호"
-        android:textColorHint="#585c61"
         android:inputType="textPassword"
+        android:textColorHint="#585c61"
         app:layout_constraintBottom_toTopOf="@+id/login_button"
         app:layout_constraintStart_toStartOf="@+id/login_email" />
 
@@ -85,16 +85,13 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:id="@+id/upper_bar"
         android:layout_width="415dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_blue_light"
-
         android:foreground="@drawable/selectable_background"
-
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -107,7 +104,6 @@
             android:fontFamily="@font/jalnan"
             android:gravity="center"
             android:text="로그인 및 설정"
-
             android:textColor="@color/white"
             android:textSize="30sp">
 
@@ -185,7 +181,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@color/darkgreen"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
