@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="36dp"
+            android:layout_width="24dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:src="@drawable/wooriicon" />
@@ -215,16 +215,7 @@
             android:textColor="@color/slategray"
             android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/jalnan"
-            android:text=""
-            android:textColor="@color/slategray"
-            android:textSize="18sp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -238,7 +229,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<<   "
+                android:text="<<  "
                 android:textColor="@color/blue"
                 android:clickable="true"/>
 
@@ -290,7 +281,23 @@
                 android:textColor="@color/blue"
                 android:clickable="true"/>
 
+
         </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="30sp"
+            android:clickable="true"
+            android:fontFamily="@font/jalnan"
+            android:text="글쓰기"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            />
+
+
 
 
 
