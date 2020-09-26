@@ -238,9 +238,19 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<1>"
+                android:text="<<   "
                 android:textColor="@color/blue"
-                android:layout_marginEnd="10dp"/>
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text=" <1>"
+                android:textColor="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -249,7 +259,8 @@
                 android:textSize="22sp"
                 android:text="<2>"
                 android:textColor="@color/blue"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -258,7 +269,8 @@
                 android:textSize="22sp"
                 android:text="<3>"
                 android:textColor="@color/blue"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -266,27 +278,20 @@
                 android:textSize="22sp"
                 android:text="<4>"
                 android:textColor="@color/blue"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<5>"
-                android:textColor="@color/blue"/>
+                android:text=" >>"
+                android:textColor="@color/blue"
+                android:clickable="true"/>
 
         </LinearLayout>
 
-
-        <ImageButton
-            android:layout_width="46dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="10dp"
-            android:background="@color/floralwhite"
-            android:foreground="@drawable/selectable_background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pictogram_user" />
 
 
     </LinearLayout>

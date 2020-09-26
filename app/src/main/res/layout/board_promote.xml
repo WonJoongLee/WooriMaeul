@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/floralwhite"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/main_topLinear"
@@ -15,8 +14,7 @@
         android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="36dp"
@@ -43,9 +41,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"
+            android:foreground="@drawable/selectable_background"
             android:scaleType="centerCrop"
-            android:src="@drawable/pictogram_user"
-            android:foreground="@drawable/selectable_background"/>
+            android:src="@drawable/pictogram_user" />
     </LinearLayout>
 
 
@@ -228,35 +226,88 @@
             android:textColor="@color/slategray"
             android:textSize="18sp" />
 
-        <ImageButton
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-            android:layout_width="46dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="10dp"
-            android:background="@color/floralwhite"
-            android:foreground="@drawable/selectable_background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pictogram_user" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text="<<   "
+                android:textColor="@color/blue"
+                android:clickable="true"/>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text=" <1>"
+                android:textColor="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text="<2>"
+                android:textColor="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text="<3>"
+                android:textColor="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text="<4>"
+                android:textColor="@color/blue"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/jalnan"
+                android:textSize="22sp"
+                android:text=" >>"
+                android:textColor="@color/blue"
+                android:clickable="true"/>
+
+        </LinearLayout>
 
 
 
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemIconTint="#000000"
         app:itemTextColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_menu"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="626dp"
-        />
+        tools:layout_editor_absoluteY="626dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
