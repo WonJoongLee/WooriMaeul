@@ -2,16 +2,17 @@ package com.example.woorimaeul;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout button_emergency, button_free, button_ad, button_information;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +50,14 @@ public class MainActivity extends AppCompatActivity {
         button_information.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent =new Intent(getApplicationContext(), SettingMain.class);
                 startActivity(intent);
             }
         });
 
+
         //TODO bottom navigation fragments 세팅
     }
+
+
 }

@@ -111,10 +111,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/sign-up"
+        android:id="@+id/sign_up"
         android:layout_width="337dp"
         android:layout_height="55dp"
-        android:layout_marginTop="428dp"
+        android:layout_marginTop="388dp"
         android:background="@drawable/main_board_custom"
         android:clickable="true"
         android:focusable="true"
@@ -139,7 +139,7 @@
         android:id="@+id/settings"
         android:layout_width="337dp"
         android:layout_height="55dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="464dp"
         android:background="@drawable/main_board_custom"
         android:clickable="true"
         android:focusable="true"

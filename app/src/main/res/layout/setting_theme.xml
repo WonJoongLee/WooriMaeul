@@ -20,6 +20,7 @@
         app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
         <Button
+            android:id="@+id/make_dark"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/black"
@@ -75,6 +76,7 @@
         app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
         <Button
+            android:id="@+id/make_light"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@android:color/background_light"

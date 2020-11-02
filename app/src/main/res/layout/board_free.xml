@@ -229,7 +229,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<<  "
+                android:text="&lt;&lt;  "
                 android:textColor="@color/blue"
                 android:clickable="true"/>
 
@@ -238,7 +238,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text=" <1>"
+                android:text=" &lt;1&gt;"
                 android:textColor="@color/blue"
                 android:layout_marginEnd="10dp"
                 android:clickable="true"/>
@@ -248,7 +248,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<2>"
+                android:text="&lt;2&gt;"
                 android:textColor="@color/blue"
                 android:layout_marginEnd="10dp"
                 android:clickable="true"/>
@@ -258,7 +258,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<3>"
+                android:text="&lt;3&gt;"
                 android:textColor="@color/blue"
                 android:layout_marginEnd="10dp"
                 android:clickable="true"/>
@@ -267,7 +267,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text="<4>"
+                android:text="&lt;4&gt;"
                 android:textColor="@color/blue"
                 android:layout_marginEnd="10dp"
                 android:clickable="true"/>
@@ -277,7 +277,7 @@
                 android:layout_height="match_parent"
                 android:fontFamily="@font/jalnan"
                 android:textSize="22sp"
-                android:text=" >>"
+                android:text=" &gt;&gt;"
                 android:textColor="@color/blue"
                 android:clickable="true"/>
 

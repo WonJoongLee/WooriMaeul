@@ -42,6 +42,7 @@
 
         <!--setting-main으로 이동하는 imageButton-->
         <ImageButton
+            android:id="@+id/to_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"
