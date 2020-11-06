@@ -21,6 +21,10 @@
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:src="@drawable/wooriicon" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,12 +34,28 @@
             android:text="Woori Town"
             android:textColor="@color/darkgreen"
             android:textSize="40sp" />
-
-        <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
         <View
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="10dp"
             android:layout_weight="1" />
+
+
+        <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/floralwhite"
+            android:clickable="true"
+            android:foreground="@drawable/selectable_background"
+            android:scaleType="fitStart"
+            android:src="@drawable/pictogram_user" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
 
         <ImageButton
             android:layout_width="50dp"
@@ -45,7 +65,6 @@
             android:scaleType="centerCrop"
             android:src="@drawable/pictogram_user" />
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/board_emergency"

@@ -8,82 +8,31 @@
 
 
     <LinearLayout
-        android:id="@+id/login"
-        android:layout_width="150dp"
+        android:id="@+id/find_id"
+        android:layout_width="337dp"
         android:layout_height="55dp"
-        android:layout_marginTop="88dp"
-        android:background="@drawable/round_rectangle"
-        android:focusable="true"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="로그인"
-            android:textColor="@android:color/holo_blue_light"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-
-    <EditText
-        android:id="@+id/login_email"
-        android:layout_width="355dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:hint="이메일"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="355dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPassword"
-        android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_button"
-        app:layout_constraintStart_toStartOf="@+id/login_email" />
-
-    <LinearLayout
-        android:id="@+id/login_button"
-        android:layout_width="355dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="204dp"
         android:clickable="true"
         android:focusable="true"
-
-        android:gravity="center"
-        app:layout_constraintHorizontal_bias="0.491"
+        android:foreground="@drawable/selectable_background"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
         <Button
+            android:id="@+id/find_password"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/main_board_custom"
-            android:backgroundTint="@android:color/holo_blue_light"
             android:fontFamily="@font/jalnan"
+
+            android:background="@drawable/main_board_custom"
             android:gravity="center"
-            android:text="LOGIN"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:text="비밀번호 찾기"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/upper_bar"
@@ -91,7 +40,9 @@
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/holo_blue_light"
+
         android:foreground="@drawable/selectable_background"
+
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -103,7 +54,8 @@
             android:layout_marginTop="0dp"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
-            android:text="로그인 및 설정"
+            android:text="아이디/비밀번호 찾기"
+
             android:textColor="@color/white"
             android:textSize="30sp">
 
@@ -111,10 +63,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/sign_up"
+        android:id="@+id/theme_white"
         android:layout_width="337dp"
         android:layout_height="55dp"
-        android:layout_marginTop="388dp"
+        android:layout_marginTop="108dp"
         android:background="@drawable/main_board_custom"
         android:clickable="true"
         android:focusable="true"
@@ -123,68 +75,16 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
-        <TextView
-            android:layout_width="343dp"
+        <Button
+            android:id="@+id/make_light"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
+            android:backgroundTint="@android:color/background_light"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
-            android:text="회원가입"
+            android:text="아이디 찾기"
             android:textColor="@color/black"
-            android:textSize="30sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/setting"
-        android:layout_width="337dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="464dp"
-        android:background="@drawable/main_board_custom"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/selectable_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
-
-        <TextView
-            android:layout_width="343dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="설정"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/find"
-        android:layout_width="337dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="539dp"
-        android:background="@drawable/main_board_custom"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/selectable_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
-
-        <TextView
-            android:layout_width="343dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="아이디/비밀번호 찾기"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -213,7 +113,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/darkgreen"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
