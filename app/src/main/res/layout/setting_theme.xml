@@ -113,7 +113,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@color/darkgreen"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->

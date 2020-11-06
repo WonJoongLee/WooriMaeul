@@ -17,7 +17,7 @@ public class SettingMain extends AppCompatActivity {
         setContentView(R.layout.setting_main);
 
         button_signup = findViewById(R.id.sign_up);
-        button_settings = findViewById(R.id.settings);
+        button_settings = findViewById(R.id.setting);
 
         button_signup.setOnClickListener(new View.OnClickListener() {
             @Override

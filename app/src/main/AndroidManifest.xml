@@ -29,6 +29,8 @@
             tools:ignore="DuplicateActivity" />
         <activity android:name=".SignUp"
             tools:ignore="DuplicateActivity" />
+        <activity android:name=".WriteNoticeBoard"
+            tools:ignore="DuplicateActivity" />
     </application>
 
 </manifest>
