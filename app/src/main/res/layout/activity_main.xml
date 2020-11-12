@@ -14,14 +14,19 @@
         android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:src="@drawable/wooriicon" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_weight="1" />
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,7 +34,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@color/darkgreen"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
@@ -38,16 +43,14 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-
-        <!--setting-main으로 이동하는 imageButton-->
         <ImageButton
-            android:id="@+id/to_setting"
+            android:id="@+id/main_to_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"
+            android:foreground="@drawable/selectable_background"
             android:scaleType="centerCrop"
-            android:src="@drawable/pictogram_user"
-            android:foreground="@drawable/selectable_background"/>
+            android:src="@drawable/pictogram_user" />
     </LinearLayout>
 
     <LinearLayout

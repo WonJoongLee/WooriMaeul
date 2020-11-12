@@ -120,6 +120,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/to_home"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
@@ -130,14 +131,13 @@
             android:layout_weight="1" />
 
 
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@color/darkgreen"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
@@ -147,6 +147,7 @@
             android:layout_weight="1" />
 
         <ImageButton
+            android:id="@+id/set_to_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"

@@ -7,7 +7,7 @@
     android:background="@color/floralwhite"
     tools:context=".MainActivity">
 
-    <LinearLayout
+  <LinearLayout
         android:id="@+id/main_topLinear"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -17,7 +17,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="24dp"
+
+            android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:src="@drawable/wooriicon" />
@@ -26,38 +27,24 @@
             android:layout_height="10dp"
             android:layout_weight="1" />
 
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@color/darkgreen"
+            android:textColor="@android:color/holo_blue_light"
             android:textSize="40sp" />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="10dp"
-            android:layout_weight="1" />
-
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/floralwhite"
-            android:clickable="true"
-            android:foreground="@drawable/selectable_background"
-            android:scaleType="fitStart"
-            android:src="@drawable/pictogram_user" />
-
         <View
             android:layout_width="0dp"
-            android:layout_height="10dp"
+            android:layout_height="0dp"
             android:layout_weight="1" />
 
-
         <ImageButton
+            android:id="@+id/ad_to_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"

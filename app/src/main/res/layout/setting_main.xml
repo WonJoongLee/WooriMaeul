@@ -162,32 +162,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/find"
-        android:layout_width="337dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="539dp"
-        android:background="@drawable/main_board_custom"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="@drawable/selectable_background"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
-
-        <TextView
-            android:layout_width="343dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="아이디/비밀번호 찾기"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/main_topLinear"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -197,6 +171,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
@@ -223,6 +198,7 @@
             android:layout_weight="1" />
 
         <ImageButton
+            android:id="@+id/setting_to_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"

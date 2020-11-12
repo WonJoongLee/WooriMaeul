@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class Settings extends AppCompatActivity {
@@ -39,6 +40,16 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getApplicationContext(), Theme.class);
+                startActivity(intent);
+            }
+        });
+
+        final ImageButton bt_set = (ImageButton)findViewById(R.id.set_to_setting);  //설정 이미지 버튼
+
+        bt_set.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getApplicationContext(), SettingMain.class);
                 startActivity(intent);
             }
         });
