@@ -131,17 +131,5 @@
             android:src="@drawable/pictogram_user" />
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
-        app:itemIconTint="#000000"
-        app:itemTextColor="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/bottom_menu"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="626dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
