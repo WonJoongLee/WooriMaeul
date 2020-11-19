@@ -46,9 +46,9 @@
             android:src="@drawable/pictogram_user" />
     </LinearLayout>
 
+
     <TextView
         android:id="@+id/board_name"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -58,9 +58,10 @@
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@id/board_rec_linear"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
-
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_topLinear" />
 
     <LinearLayout
         android:id="@+id/board_rec_linear"
