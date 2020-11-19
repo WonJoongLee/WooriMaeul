@@ -6,85 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/floralwhite">
 
-    <EditText
-        android:id="@+id/login_name"
-        android:layout_width="355dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="이름"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/login_email"
-        android:layout_width="355dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="36dp"
-        android:ems="10"
-        android:hint="이메일"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/login_password"
-        android:layout_width="355dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPassword"
-        android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_password_check"
-        app:layout_constraintStart_toStartOf="@+id/login_email" />
-
-    <EditText
-        android:id="@+id/login_password_check"
-        android:layout_width="355dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
-        android:ems="10"
-        android:hint="비밀번호 확인"
-        android:inputType="textPassword"
-        android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_button"
-        app:layout_constraintStart_toStartOf="@+id/login_password" />
-
-    <LinearLayout
-        android:id="@+id/login_button"
-        android:layout_width="355dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="450dp"
-        android:clickable="true"
-        android:focusable="true"
-
-        android:gravity="center"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/main_topLinear">
-
-        <Button
-            android:id="@+id/do_signup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/main_board_custom"
-            android:backgroundTint="@android:color/holo_blue_light"
-            android:fontFamily="@font/jalnan"
-            android:gravity="center"
-            android:text="SIGN UP"
-            android:textColor="@color/white"
-            android:textSize="25sp" />
-
-    </LinearLayout>
-
-
 
     <LinearLayout
         android:id="@+id/upper_bar"
@@ -106,7 +27,7 @@
             android:layout_marginTop="0dp"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
-            android:text="회원가입"
+            android:text="긴급 게시판 알림"
 
             android:textColor="@color/white"
             android:textSize="30sp">
@@ -124,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-
+            android:id="@+id/to_home"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
@@ -151,7 +72,7 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/signup_to_setting"
+            android:id="@+id/notifi_to_setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@color/floralwhite"

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.woorimaeul">
 
     <application
@@ -9,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Information"/>
+        <activity android:name=".Information" />
         <activity android:name=".Advertise" />
         <activity android:name=".Free" />
         <activity android:name=".Emergency" />
@@ -25,6 +27,9 @@
         <activity android:name=".Settings" />
         <activity android:name=".SettingMain" />
         <activity android:name=".WriteNoticeBoard" />
+        <activity android:name=".Notify" />
+        <activity android:name=".Comment" />
+        <activity android:name=".Emergency_notify"/>
     </application>
 
 </manifest>

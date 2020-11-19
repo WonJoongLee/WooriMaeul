@@ -24,7 +24,7 @@ public class Settings extends AppCompatActivity {
         button_notify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), Settings.class);
+                Intent intent =new Intent(getApplicationContext(), Notify.class);
                 startActivity(intent);
             }
         });
