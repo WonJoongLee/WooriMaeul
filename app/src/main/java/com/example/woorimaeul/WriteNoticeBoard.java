@@ -26,7 +26,5 @@ public class WriteNoticeBoard extends AppCompatActivity {
                 startActivity(intent); // 이동
             }
         });
-
-
     }
 }
