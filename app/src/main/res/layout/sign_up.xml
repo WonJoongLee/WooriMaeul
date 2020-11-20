@@ -7,7 +7,7 @@
     android:background="@color/floralwhite">
 
     <EditText
-        android:id="@+id/login_name"
+        android:id="@+id/SignupName"
         android:layout_width="355dp"
         android:layout_height="50dp"
         android:layout_marginBottom="36dp"
@@ -15,12 +15,13 @@
         android:hint="이름"
         android:inputType="textEmailAddress"
         android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_email"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/login_email"
+        android:id="@+id/SignUpEmail"
         android:layout_width="355dp"
         android:layout_height="50dp"
         android:layout_marginBottom="36dp"
@@ -28,12 +29,13 @@
         android:hint="이메일"
         android:inputType="textEmailAddress"
         android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_password"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/login_password"
+        android:id="@+id/SignUpPassword"
         android:layout_width="355dp"
         android:layout_height="50dp"
         android:layout_marginBottom="32dp"
@@ -41,11 +43,13 @@
         android:hint="비밀번호"
         android:inputType="textPassword"
         android:textColorHint="#585c61"
-        app:layout_constraintBottom_toTopOf="@+id/login_password_check"
-        app:layout_constraintStart_toStartOf="@+id/login_email" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpPasswordCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
-        android:id="@+id/login_password_check"
+        android:id="@+id/SignUpPasswordCheck"
         android:layout_width="355dp"
         android:layout_height="50dp"
         android:layout_marginBottom="40dp"
@@ -53,8 +57,10 @@
         android:hint="비밀번호 확인"
         android:inputType="textPassword"
         android:textColorHint="#585c61"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/login_button"
-        app:layout_constraintStart_toStartOf="@+id/login_password" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <LinearLayout
         android:id="@+id/login_button"

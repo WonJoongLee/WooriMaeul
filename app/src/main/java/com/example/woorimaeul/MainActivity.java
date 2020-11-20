@@ -6,12 +6,14 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout button_emergency, button_free, button_ad, button_information;
+    ImageButton MainToSetting;
 
 
     @SuppressLint("WrongViewCast")
@@ -25,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
         button_free = findViewById(R.id.board_free);
         button_ad = findViewById(R.id.board_ad);
         button_information = findViewById(R.id.board_info);
-
-        final ImageButton bt_set = (ImageButton)findViewById(R.id.main_to_setting);  //설정 이미지 버튼
+        MainToSetting = findViewById(R.id.main_to_setting);
 
         button_emergency.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,10 +61,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        bt_set.setOnClickListener(new View.OnClickListener() {
+        MainToSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getApplicationContext(), SettingMain.class);
+                //Intent intent =new Intent(getApplicationContext(), SignUp.class);
                 startActivity(intent);
             }
         });

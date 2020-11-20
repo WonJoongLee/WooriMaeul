@@ -39,6 +39,7 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="이메일"
+        android:textColor="@color/black"
         android:inputType="textEmailAddress"
         android:textColorHint="#585c61"
         app:layout_constraintBottom_toTopOf="@+id/login_password"
@@ -52,10 +53,13 @@
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:hint="비밀번호"
+        android:textColor="@color/black"
         android:inputType="textPassword"
         android:textColorHint="#585c61"
         app:layout_constraintBottom_toTopOf="@+id/login_button"
         app:layout_constraintStart_toStartOf="@+id/login_email" />
+
+    <!--android:textCursorDrawable="@android:color/holo_blue_light"-->
 
     <LinearLayout
         android:id="@+id/login_button"
@@ -72,6 +76,7 @@
         app:layout_constraintTop_toBottomOf="@id/main_topLinear">
 
         <Button
+            android:id="@+id/settingLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/main_board_custom"
