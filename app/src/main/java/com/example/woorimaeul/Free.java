@@ -19,6 +19,7 @@ public class Free extends AppCompatActivity {
 
 
         final ImageButton bt_set = (ImageButton)findViewById(R.id.free_to_setting);  //설정 이미지 버튼
+        write = findViewById(R.id.write_button);
 
         bt_set.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +30,7 @@ public class Free extends AppCompatActivity {
         });
 
         setContentView(R.layout.writenotice_board);
-        write = findViewById(R.id.write_button);
+
 
         write.setOnClickListener(new View.OnClickListener() { // 버튼이 클릭 됐을 때 어떤 작업을 할지 설정.
             @Override

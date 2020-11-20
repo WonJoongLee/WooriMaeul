@@ -97,12 +97,11 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="398dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="411dp"
         android:layout_height="50dp"
         android:ems="10"
-        android:hint="user_id"
         android:inputType="textPersonName"
         android:textColor="#040303"
         android:textColorHint="@color/slategray"
@@ -110,12 +109,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName3"
         android:layout_width="411dp"
         android:layout_height="478dp"
         android:ems="10"
-        android:hint="board_write"
         android:inputType="textPersonName"
         android:singleLine="false"
         android:textColor="@color/black"
@@ -123,6 +121,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
