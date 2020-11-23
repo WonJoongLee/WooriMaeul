@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         button_emergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), Emergency.class); // TODO 추후 페이지 만들어지면 수정
+                Intent intent =new Intent(getApplicationContext(), board.class); 
                 startActivity(intent);
             }
         });

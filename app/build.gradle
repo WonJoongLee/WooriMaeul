@@ -28,12 +28,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.firebase:firebase-database:19.5.1' // firebase
-    implementation 'com.google.firebase:firebase-auth:16.0.5'
-    testImplementation 'junit:junit:4.13'
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //implementation 'com.google.android.material:material:1.2.1'
     implementation 'com.android.support:design:30.0.0' // bottomNavigationView
+    implementation 'androidx.recyclerview:recyclerview:1.1.0' //리사이클러뷰
 
     /*여기 아래서부터는 FirebaseAuth작업관련*/
     // Import the BoM for the Firebase platform

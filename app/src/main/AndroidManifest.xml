@@ -31,6 +31,8 @@
         <activity android:name=".Notify" />
         <activity android:name=".Comment" />
         <activity android:name=".Emergency_notify"/>
+        <activity android:name=".board"/>
+
     </application>
 
 </manifest>
