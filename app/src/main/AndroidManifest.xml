@@ -27,7 +27,7 @@
         <activity android:name=".Theme" />
         <activity android:name=".Settings" />
         <activity android:name=".SettingMain" />
-        <activity android:name=".WriteNoticeBoard" />
+        <activity android:name=".upload.WriteNoticeBoard" />
         <activity android:name=".Notify" />
         <activity android:name=".Comment" />
         <activity android:name=".Emergency_notify"/>

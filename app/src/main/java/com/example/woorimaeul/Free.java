@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.woorimaeul.upload.WriteNoticeBoard;
+
 public class Free extends AppCompatActivity {
 
     Button write;

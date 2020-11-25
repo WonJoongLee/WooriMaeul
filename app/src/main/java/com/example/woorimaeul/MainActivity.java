@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import com.example.woorimaeul.upload.WriteNoticeBoard;
+
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout button_emergency, button_free, button_ad, button_information;
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         button_free.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), Free.class);
+                Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);
                 startActivity(intent);
             }
         });

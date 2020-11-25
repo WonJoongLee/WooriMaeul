@@ -45,3 +45,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     /*위에까지 Firebase Auth*/
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}
