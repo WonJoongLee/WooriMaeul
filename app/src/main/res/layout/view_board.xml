@@ -9,16 +9,16 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="411dp"
-        android:layout_height="50dp"
+        android:layout_width="412dp"
+        android:layout_height="54dp"
         android:ems="10"
         android:hint="title"
         android:inputType="textPersonName"
         android:textColor="#040303"
         android:textColorHint="@color/slategray"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/main_topLinear" />
 
     <LinearLayout
         android:id="@+id/main_topLinear"
@@ -35,6 +35,7 @@
             android:layout_height="36dp"
             android:layout_gravity="center"
             android:src="@drawable/wooriicon" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="10dp"
@@ -78,41 +79,23 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="415dp"
-        android:layout_height="41dp"
-        android:text="View_board"
-        android:textAlignment="center"
-        android:textColor="#111112"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_topLinear" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="398dp" />
-
-    <TextView
         android:id="@+id/editTextTextPersonName2"
-        android:layout_width="411dp"
-        android:layout_height="50dp"
+        android:layout_width="260dp"
+        android:layout_height="27dp"
         android:ems="10"
+        android:hint="user_name"
         android:inputType="textPersonName"
         android:textColor="#040303"
         android:textColorHint="@color/slategray"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <TextView
         android:id="@+id/editTextTextPersonName3"
-        android:layout_width="411dp"
-        android:layout_height="478dp"
+        android:layout_width="415dp"
+        android:layout_height="226dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:singleLine="false"
@@ -120,8 +103,53 @@
         android:textColorHint="@color/slategray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        tools:text="CONTENT" />
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.997"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_topLinear"
+        app:srcCompat="@android:drawable/ic_dialog_alert"
+        tools:ignore="MissingConstraints" />
+
+    <ExpandableListView
+        android:id="@+id/comment_list"
+        android:layout_width="411dp"
+        android:layout_height="305dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="315dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:hint="댓글을 남겨주세요"
+        android:textColorHint="@color/slategray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comment_list" />
+
+    <ImageButton
+        android:id="@+id/send"
+        android:layout_width="49dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/comment_list"
+        app:srcCompat="@android:drawable/ic_menu_send" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

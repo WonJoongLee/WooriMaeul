@@ -15,7 +15,7 @@ import com.example.woorimaeul.upload.WriteNoticeBoard;
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout button_emergency, button_free, button_ad, button_information;
-    ImageButton MainToSetting;
+    ImageButton MainToSetting, button_viewboard;
 
 
     @SuppressLint("WrongViewCast")
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         button_ad = findViewById(R.id.board_ad);
         button_information = findViewById(R.id.board_info);
         MainToSetting = findViewById(R.id.main_to_setting);
+        button_viewboard=findViewById(R.id.send);
 
         button_emergency.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         button_free.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);
+                startActivity(intent);
+            }
+        });
+
+        button_viewboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);

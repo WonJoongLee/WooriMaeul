@@ -1,10 +1,12 @@
 package com.example.woorimaeul.upload;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -17,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class WriteNoticeBoard extends AppCompatActivity {
 
-    Button complete; // Button 변수 선언
+    ImageButton complete; // Button 변수 선언
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     private EditText uTitle, uArticle;
