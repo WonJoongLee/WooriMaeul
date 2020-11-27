@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.woorimaeul.MainActivity;
 import com.example.woorimaeul.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -24,6 +26,9 @@ public class WriteNoticeBoard extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private EditText uTitle, uArticle;
     Board board;
+    FirebaseAuth firebaseAuth;
+    FirebaseUser firebaseUser;
+    String userId;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,12 +42,15 @@ public class WriteNoticeBoard extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         databaseReference = database.getReference("Posting").child("Free");
 
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        userId = firebaseUser.getUid();//userId에 user 키 값 저장
+
         complete.setOnClickListener(new View.OnClickListener() { // 버튼 클릭 되면 서버로 전송하고 메인 액티비티로 복귀
             @Override
             public void onClick(View view) {
                 System.out.println("@@@여기까지들어와짐");
 
-                board = new Board(uTitle.getText().toString(), uArticle.getText().toString());
+                board = new Board(uTitle.getText().toString(), uArticle.getText().toString(), userId);
                 databaseReference.push().setValue(board);
 
                 Intent intent =new Intent(getApplicationContext(), MainActivity.class); // 이동할 대상 화면 설정

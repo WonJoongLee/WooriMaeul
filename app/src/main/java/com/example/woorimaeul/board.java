@@ -36,8 +36,6 @@ public class board extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board);
 
-
-
         recyclerView = findViewById(R.id.BoardRecyclerView);  // 아이디 연결
         recyclerView.setHasFixedSize(true); //리사이클러뷰 기존 성능 강화
         layoutManager = new LinearLayoutManager(this);
@@ -46,13 +44,13 @@ public class board extends AppCompatActivity {
 
         database  = FirebaseDatabase.getInstance(); //파이어베이스 데이터베이스 연동
 
-        databaseReference = database.getReference("BoardList"); //DB 테이블 연결
+        //databaseReference = database.getReference("BoardList"); //DB 테이블 연결
+        databaseReference = database.getReference().child("Posting").child("Free"); //DB 테이블 연결
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot datasnapshot) {
                 //파이어베이스 데이터베이스의 데이터를 받아오는 곳
                 arrayList.clear();  //기존 배열 리스트가 존재하지 않게 초기화
-
                 for (DataSnapshot snapshot : datasnapshot.getChildren()){   //반복문으로 데이터 list 추출
                     BoardList boardList = snapshot.getValue(BoardList.class);   //만들어둔 BoardList 객체에 데이터를 담는다
                     arrayList.add(boardList);   //담은 데이터를 배열리스트에 넣고 리사이클러로 보낼준비
@@ -70,7 +68,5 @@ public class board extends AppCompatActivity {
 
         adapter = new CustomAdapter(arrayList, this);
         recyclerView.setAdapter(adapter); //리사이클러뷰에 어뎁터 연결
-
-
     }
 }

@@ -21,7 +21,6 @@
         >
 
         <TextView
-
             android:id="@+id/board_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +38,7 @@
             android:text="아이디"
             android:textSize="13sp"
             android:fontFamily="@font/jalnan"
-            android:textColor="#E9E9E9"
+            android:textColor="#333333"
             />
 
         <!--아이디 색 회색으로 바꾸기-->

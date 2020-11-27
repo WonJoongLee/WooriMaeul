@@ -30,7 +30,7 @@ public class VIEWBOARD extends AppCompatActivity {
         send_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                board = new Board(uTitle.getText().toString(), uArticle.getText().toString());
+                //board = new Board(uTitle.getText().toString(), uArticle.getText().toString());
 
                 Intent intent =new Intent(getApplicationContext(), MainActivity.class); // 이동할 대상 화면 설정
                 startActivity(intent); // 이동
