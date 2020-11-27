@@ -19,8 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SettingMain extends AppCompatActivity {
 
-    LinearLayout button_signup, button_settings;
-    Button mLoginBtn;
+    //LinearLayout button_signup, button_settings;
+    Button mLoginBtn, button_signup;
     EditText mEmailText, mPasswordText;
     private FirebaseAuth firebaseAuth;
 
@@ -31,7 +31,6 @@ public class SettingMain extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         button_signup = findViewById(R.id.sign_up);
-        button_settings = findViewById(R.id.setting);
         mEmailText = findViewById(R.id.login_email);
         mPasswordText = findViewById(R.id.login_password);
         mLoginBtn = findViewById(R.id.settingLogin);
@@ -42,14 +41,6 @@ public class SettingMain extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getApplicationContext(), SignUp.class);
-                startActivity(intent);
-            }
-        });
-
-        button_settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), Settings.class);
                 startActivity(intent);
             }
         });

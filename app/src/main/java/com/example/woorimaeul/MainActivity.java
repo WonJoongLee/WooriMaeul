@@ -1,5 +1,6 @@
 package com.example.woorimaeul;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -11,11 +12,14 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.woorimaeul.upload.WriteNoticeBoard;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
     LinearLayout button_emergency, button_free, button_ad, button_information;
     ImageButton MainToSetting, button_viewboard;
+    FirebaseUser fbUser;
 
 
     @SuppressLint("WrongViewCast")
@@ -30,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
         button_information = findViewById(R.id.board_info);
         MainToSetting = findViewById(R.id.main_to_setting);
         button_viewboard=findViewById(R.id.send);
+
+        fbUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(fbUser==null){
+            System.out.println("@@@user is null");
+        }else{
+            System.out.println("@@@user got in");
+        }
 
         button_emergency.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,9 +86,14 @@ public class MainActivity extends AppCompatActivity {
         MainToSetting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), SettingMain.class);
-                //Intent intent =new Intent(getApplicationContext(), SignUp.class);
-                startActivity(intent);
+                if(fbUser==null){
+                    Intent intent =new Intent(getApplicationContext(), SettingMain.class);
+                    startActivity(intent);
+                }else{
+                    Intent intent =new Intent(getApplicationContext(), ShowLogin.class);
+                    startActivity(intent);
+                }
+
             }
         });
 
