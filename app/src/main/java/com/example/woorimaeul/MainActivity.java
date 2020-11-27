@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("WrongViewCast")
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -48,13 +47,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /*
         button_viewboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         button_ad.setOnClickListener(new View.OnClickListener() {
             @Override

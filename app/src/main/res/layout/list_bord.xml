@@ -16,14 +16,19 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:ignore="MissingConstraints"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         >
 
         <TextView
+
             android:id="@+id/board_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="제목"
+            android:textSize="20sp"
+            android:fontFamily="@font/jalnan"
             android:textColor="@color/black" />
 
         <TextView
@@ -32,7 +37,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:text="아이디"
-            android:textColor="@color/black" />
+            android:textSize="13sp"
+            android:fontFamily="@font/jalnan"
+            android:textColor="#E9E9E9"
+            />
+
+        <!--아이디 색 회색으로 바꾸기-->
 
     </LinearLayout>
 

@@ -71,15 +71,16 @@
 
     <EditText
         android:id="@+id/uploadArticle"
-        android:layout_width="446dp"
-        android:layout_height="535dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:hint="content"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/uploadTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/uploadTitle"
+        app:layout_constraintBottom_toTopOf="@id/completeButton"/>
 
     <ImageButton
         android:id="@+id/completeButton"
@@ -87,6 +88,7 @@
         android:layout_height="78dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uploadArticle"
         app:srcCompat="@android:drawable/ic_input_add" />
 
