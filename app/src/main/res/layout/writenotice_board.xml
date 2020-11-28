@@ -36,7 +36,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
@@ -64,10 +64,13 @@
         android:textColor="#000000"
         android:textColorHint="@color/slategray"
         android:textSize="20sp"
+        android:backgroundTint="@color/blue"
+        android:textCursorDrawable="@drawable/cursor_color"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_topLinear" />
+        app:layout_constraintTop_toBottomOf="@+id/main_topLinear"
+        app:layout_constraintBottom_toTopOf="@id/uploadArticle"/>
 
     <EditText
         android:id="@+id/uploadArticle"
@@ -77,6 +80,8 @@
         android:hint="content"
         android:textColor="#000000"
         android:textColorHint="@color/slategray"
+        android:backgroundTint="@color/blue"
+        android:textCursorDrawable="@drawable/cursor_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uploadTitle"
@@ -91,8 +96,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/uploadArticle"
         app:srcCompat="@android:drawable/ic_input_add" />
-
-    <!--constraintVertical bias를 0으로 줘서 맨 위에 붙임(title바로 아래 붙도록 설정)-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

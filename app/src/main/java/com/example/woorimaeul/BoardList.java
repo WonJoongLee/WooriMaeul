@@ -2,7 +2,7 @@ package com.example.woorimaeul;
 
 public class BoardList {
     private String title;
-    private String userId;
+    private String name;
     private String article;
 
 
@@ -14,12 +14,12 @@ public class BoardList {
         this.title = title;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getName() {
+        return name;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getArticle() {

@@ -3,14 +3,14 @@ package com.example.woorimaeul.upload;
 public class Board {
     String title;
     String article;
-    String userId;
+    String name;
 
     Board(){}
 
-    Board(String title, String article, String userId){
+    Board(String title, String article, String name){
         this.title = title;
         this.article = article;
-        this.userId = userId;
+        this.name = name;
     }
 
     public String getTitle() {
@@ -30,12 +30,12 @@ public class Board {
     }
 
 
-    public String getUserId() {
-        return userId;
+    public String getName() {
+        return name;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
