@@ -12,6 +12,8 @@
         android:layout_height="50dp"
         android:layout_marginBottom="36dp"
         android:ems="10"
+        android:backgroundTint="@color/blue"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:hint="이름"
         android:inputType="textEmailAddress"
         android:textColorHint="#585c61"
@@ -27,6 +29,8 @@
         android:layout_marginBottom="36dp"
         android:ems="10"
         android:hint="이메일"
+        android:backgroundTint="@color/blue"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:inputType="textEmailAddress"
         android:textColorHint="#585c61"
         android:textColor="@color/black"
@@ -42,6 +46,8 @@
         android:ems="10"
         android:hint="비밀번호"
         android:inputType="textPassword"
+        android:backgroundTint="@color/blue"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:textColorHint="#585c61"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/SignUpPasswordCheck"
@@ -54,6 +60,8 @@
         android:layout_height="50dp"
         android:layout_marginBottom="40dp"
         android:ems="10"
+        android:backgroundTint="@color/blue"
+        android:textCursorDrawable="@drawable/cursor_color"
         android:hint="비밀번호 확인"
         android:inputType="textPassword"
         android:textColorHint="#585c61"
@@ -81,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/main_board_custom"
-            android:backgroundTint="@android:color/holo_blue_light"
+            android:backgroundTint="@color/blue"
             android:fontFamily="@font/jalnan"
             android:gravity="center"
             android:text="SIGN UP"
@@ -97,7 +105,7 @@
         android:layout_width="415dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
-        android:background="@android:color/holo_blue_light"
+        android:background="@color/blue"
 
         android:foreground="@drawable/selectable_background"
 
@@ -147,7 +155,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->

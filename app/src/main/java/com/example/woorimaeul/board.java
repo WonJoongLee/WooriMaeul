@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +16,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.woorimaeul.upload.WriteNoticeBoard;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,6 +39,7 @@ public class board extends AppCompatActivity {
     private String boardName, dbBoard;
     private TextView boardNameTextview;
     private Button writeButton;
+    private FirebaseUser fbUser;
 
 
     @SuppressLint("WrongViewCast")
@@ -51,6 +55,8 @@ public class board extends AppCompatActivity {
         arrayList = new ArrayList<>(); // BoardList 객체를 담을 어레이 리스트(어뎁터 쪽으로)
 
         database  = FirebaseDatabase.getInstance(); //파이어베이스 데이터베이스 연동
+
+        fbUser = FirebaseAuth.getInstance().getCurrentUser();
 
         intent = getIntent();//MainActivity에서 사용자가 어떤 게시판을 클릭했는지 추적
         boardName = intent.getStringExtra("boardName");//예를 들면, Mainactivity에서 긴급게시판을 클릭했으면 boardName String에 boardName 저장
@@ -87,12 +93,18 @@ public class board extends AppCompatActivity {
         adapter = new CustomAdapter(arrayList, this);
         recyclerView.setAdapter(adapter); //리사이클러뷰에 어뎁터 연결
 
+
         writeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), WriteNoticeBoard.class);
-                intent.putExtra("dbBoard", dbBoard);
-                startActivity(intent);
+                if(fbUser!=null) {
+                    Intent intent = new Intent(getApplicationContext(), WriteNoticeBoard.class);
+                    intent.putExtra("dbBoard", dbBoard);
+                    startActivity(intent);
+                }else {
+                    Toast toast = Toast.makeText(getApplicationContext(), "먼저 로그인을 해주세요!", Toast.LENGTH_LONG);
+                    toast.show();
+                }
             }
         });
     }
