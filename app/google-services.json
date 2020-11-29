@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "850109069080",
+    "firebase_url": "https://woorimaeul-587a6.firebaseio.com",
+    "project_id": "woorimaeul-587a6",
+    "storage_bucket": "woorimaeul-587a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850109069080:android:c86d801b6fe5ca6994106d",
+        "android_client_info": {
+          "package_name": "com.example.woorimaeul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850109069080-gen0huia25riglbfhinl20bm9ag1rec9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.woorimaeul",
+            "certificate_hash": "9153f521cd2a426c953afa2f429135d5f8ac474d"
+          }
+        },
+        {
+          "client_id": "850109069080-rqsoaorbkc7fp1bgdmt3mhtv0m0pnqnc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzv9DfGq_njxZd9BY0S2cpUFFG-gU936Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850109069080-rqsoaorbkc7fp1bgdmt3mhtv0m0pnqnc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
