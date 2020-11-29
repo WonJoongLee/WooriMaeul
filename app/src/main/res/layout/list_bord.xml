@@ -38,7 +38,7 @@
             android:text="아이디"
             android:textSize="13sp"
             android:fontFamily="@font/jalnan"
-            android:textColor="#333333"
+            android:textColor="#868e96"
             />
 
         <!--아이디 색 회색으로 바꾸기-->

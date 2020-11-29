@@ -88,7 +88,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/jalnan"
-            android:text="청주에서 코로나 환자 급증으로 3단계 격상.."
+            android:text="청주 코로나 환자 급증으로 3단계 격상.."
             android:textColor="@color/slategray"
             android:textSize="18sp" />
     </LinearLayout>
@@ -224,7 +224,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:fontFamily="@font/jalnan"
-            android:text=" - 시립미술관에서 홍길동작가 전시하네요"
+            android:text=" - 시립미술관에서 홍길동작가 전시"
             android:textColor="@color/slategray"
             android:textSize="18sp" />
 

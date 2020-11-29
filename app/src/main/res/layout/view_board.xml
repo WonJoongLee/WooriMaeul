@@ -7,19 +7,6 @@
     android:background="@color/floralwhite"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="412dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="title"
-        android:inputType="textPersonName"
-        android:textColor="#040303"
-        android:textColorHint="@color/slategray"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_topLinear" />
-
     <LinearLayout
         android:id="@+id/main_topLinear"
         android:layout_width="match_parent"
@@ -27,7 +14,8 @@
         android:layout_margin="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvTtile">
 
         <ImageView
 
@@ -48,7 +36,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/jalnan"
             android:text="Woori Town"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
 
         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
@@ -67,6 +55,23 @@
             android:src="@drawable/pictogram_user" />
     </LinearLayout>
 
+
+    <TextView
+        android:id="@+id/tvTtile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제목이 들어갈 공간"
+        app:layout_constraintHorizontal_bias="0"
+        android:fontFamily="@font/jalnan"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toLeftOf="@id/reportButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_topLinear" />
+
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="0dp"
@@ -79,76 +84,75 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/tvWriter"
         android:layout_width="260dp"
-        android:layout_height="27dp"
-        android:ems="10"
-        android:hint="user_name"
-        android:inputType="textPersonName"
-        android:textColor="#040303"
-        android:textColorHint="@color/slategray"
+        android:layout_height="wrap_content"
+        android:text="작성자"
+        android:gravity="end"
+        android:fontFamily="@font/jalnan"
+        android:textSize="15sp"
+        android:layout_marginRight="10dp"
+        android:textColor="#868e96"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/reportButton" />
 
     <TextView
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="415dp"
-        android:layout_height="226dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:singleLine="false"
+        android:id="@+id/contentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/slategray"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/tvWriter"
+        app:layout_constraintBottom_toTopOf="@id/contentEditText"
+        app:layout_constraintVertical_bias="0"
         tools:text="CONTENT" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.997"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_topLinear"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        tools:ignore="MissingConstraints" />
-
-    <ExpandableListView
-        android:id="@+id/comment_list"
-        android:layout_width="411dp"
-        android:layout_height="305dp"
+    <Button
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        android:id="@+id/reportButton"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@id/tvTtile"
+        app:layout_constraintTop_toBottomOf="@+id/main_topLinear"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        android:foregroundGravity="center_vertical"
+        android:text="신고"
+        />
 
     <EditText
-        android:id="@+id/textView"
-        android:layout_width="315dp"
-        android:layout_height="45dp"
+        android:id="@+id/contentEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="4dp"
         android:hint="댓글을 남겨주세요"
         android:textColorHint="@color/slategray"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/comment_list" />
+        android:backgroundTint="@color/blue"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textCursorDrawable="@drawable/cursor_color"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintRight_toLeftOf="@id/send"
+        />
 
     <ImageButton
         android:id="@+id/send"
         android:layout_width="49dp"
         android:layout_height="45dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/comment_list"
+        app:layout_constraintLeft_toRightOf="@id/contentEditText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
         app:srcCompat="@android:drawable/ic_menu_send" />
 
 

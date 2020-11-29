@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         button_emergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), board.class); 
+                Intent intent =new Intent(getApplicationContext(), board.class);
+                intent.putExtra("boardName", "긴급게시판");
+                intent.putExtra("dbBoard", "Emergency");
                 startActivity(intent);
             }
         });
@@ -53,10 +55,21 @@ public class MainActivity extends AppCompatActivity {
         button_free.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);
+                Intent intent =new Intent(getApplicationContext(), board.class);
+                intent.putExtra("boardName", "자유게시판");
+                intent.putExtra("dbBoard", "Free");
                 startActivity(intent);
             }
         });
+
+        /*
+        button_free.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);
+                startActivity(intent);
+            }
+        });*/
 
         /*
         button_viewboard.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +83,9 @@ public class MainActivity extends AppCompatActivity {
         button_ad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), Advertise.class);
+                Intent intent =new Intent(getApplicationContext(), board.class);
+                intent.putExtra("boardName", "홍보게시판");
+                intent.putExtra("dbBoard", "Ad");
                 startActivity(intent);
             }
         });
@@ -78,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
         button_information.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(getApplicationContext(), Information.class);
+                Intent intent =new Intent(getApplicationContext(), board.class);
+                intent.putExtra("boardName", "정보게시판");
+                intent.putExtra("dbBoard", "Info");
                 startActivity(intent);
             }
         });
@@ -96,10 +113,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        //TODO bottom navigation fragments 세팅
     }
-
-
 }

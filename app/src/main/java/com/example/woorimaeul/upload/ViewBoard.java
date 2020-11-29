@@ -14,16 +14,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.woorimaeul.MainActivity;
 import com.example.woorimaeul.R;
 
-public class VIEWBOARD extends AppCompatActivity {
+public class ViewBoard extends AppCompatActivity {
 
     ImageButton send_b;
     private EditText uTitle, uArticle;
     Board board;
+    Intent intent;
+    String title, content, writer;
+    TextView tvTitle, tvWriter, tvContent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_board);
+
+        intent = getIntent();
+        title = intent.getStringExtra("title");
+        content = intent.getStringExtra("content");
+        writer = intent.getStringExtra("writer");
+
+
+        tvTitle = findViewById(R.id.tvTtile);
+        tvWriter = findViewById(R.id.tvWriter);
+        tvContent = findViewById(R.id.contentTextView);
+
+        writer = "작성자 : " + writer;
+
+        tvTitle.setText(title);
+        tvWriter.setText(writer);
+        tvContent.setText(content);
 
         send_b = findViewById(R.id.send);
 

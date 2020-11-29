@@ -35,6 +35,8 @@ public class WriteNoticeBoard extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     String userId, name;
+    String dbBoard;
+    private Intent intent;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,8 +47,11 @@ public class WriteNoticeBoard extends AppCompatActivity {
         uTitle = (EditText) findViewById(R.id.uploadTitle);//글 제목
         uArticle = (EditText) findViewById(R.id.uploadArticle);//글 내용
 
+        intent = getIntent();
+        dbBoard = intent.getStringExtra("dbBoard");
+
         database = FirebaseDatabase.getInstance();//db위치로부터 값 가져옴
-        databaseReference = database.getReference("Posting").child("Free");
+        databaseReference = database.getReference("Posting").child(dbBoard);
         databaseReferenceUser = database.getReference("Users");
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
