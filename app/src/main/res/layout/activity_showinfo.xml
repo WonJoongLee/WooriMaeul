@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/floralwhite"
-    tools:context=".MainActivity">
+    android:background="@color/floralwhite">
 
     <LinearLayout
         android:id="@+id/main_topLinear"
@@ -44,68 +43,33 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <ImageButton
-            android:id="@+id/setting_to_setting"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@color/floralwhite"
-            android:foreground="@drawable/selectable_background"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pictogram_user" />
     </LinearLayout>
-
 
     <TextView
-        android:id="@+id/board_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/jalnan"
-        android:gravity="center"
-        android:text="자유게시판"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/loginValue"
         app:layout_constraintTop_toBottomOf="@id/main_topLinear"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/jalnan"
+        android:text="로그인 상태입니다."
+        android:textSize="20sp"
+        android:textColor="@color/black" />
 
-    <LinearLayout
-        android:id="@+id/recyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/board_name"
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginValue"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintHorizontal_bias="0"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        >
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/BoardRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-
-    </LinearLayout>
-    
-    <Button
-        android:id="@+id/button_write"
-        android:text="글쓰기"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:background="@color/blue"
+        android:text="로그아웃"
         android:fontFamily="@font/jalnan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-
+        android:background="@color/blue"
+        android:textSize="20sp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

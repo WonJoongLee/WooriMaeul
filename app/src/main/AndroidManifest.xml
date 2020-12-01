@@ -32,7 +32,8 @@
         <activity android:name=".Comment" />
         <activity android:name=".Emergency_notify"/>
         <activity android:name=".board"/>
-
+        <activity android:name=".ShowLogin"/>
+        <activity android:name=".upload.ViewBoard"/>
     </application>
 
 </manifest>

@@ -2,11 +2,9 @@ package com.example.woorimaeul;
 
 public class BoardList {
     private String title;
-    private String username;
-    private String contents;
+    private String name;
+    private String article;
 
-
-    public BoardList(){}
 
     public String getTitle() {
         return title;
@@ -16,19 +14,22 @@ public class BoardList {
         this.title = title;
     }
 
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getContents() {
-        return contents;
+    public String getArticle() {
+        return article;
     }
 
-    public void setContents(String contents) {
-        this.contents = contents;
+    public void setArticle(String article) {
+        this.article = article;
     }
+
+    public BoardList(){}
+
 }

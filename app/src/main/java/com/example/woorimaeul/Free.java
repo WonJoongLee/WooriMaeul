@@ -12,16 +12,16 @@ import com.example.woorimaeul.upload.WriteNoticeBoard;
 
 public class Free extends AppCompatActivity {
 
-    Button write;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.board_free);       //일단 화면만 표시
-
+        setContentView(R.layout.writenotice_board);
 
         final ImageButton bt_set = (ImageButton)findViewById(R.id.free_to_setting);  //설정 이미지 버튼
-        write = findViewById(R.id.write_button);
+        final Button write = (Button)findViewById(R.id.write_button);
 
         bt_set.setOnClickListener(new View.OnClickListener() {
             @Override
