@@ -1,0 +1,259 @@
+Index: app/src/main/java/com/example/woorimaeul/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.woorimaeul;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\nimport android.widget.ImageButton;\r\nimport android.widget.LinearLayout;\r\n\r\nimport com.example.woorimaeul.upload.WriteNoticeBoard;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    LinearLayout button_emergency, button_free, button_ad, button_information;\r\n    ImageButton MainToSetting;\r\n\r\n\r\n    @SuppressLint(\"WrongViewCast\")\r\n    @Override\r\n\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        button_emergency = findViewById(R.id.board_emergency);\r\n        button_free = findViewById(R.id.board_free);\r\n        button_ad = findViewById(R.id.board_ad);\r\n        button_information = findViewById(R.id.board_info);\r\n        MainToSetting = findViewById(R.id.main_to_setting);\r\n\r\n        button_emergency.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent =new Intent(getApplicationContext(), board.class); \r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n        button_free.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent =new Intent(getApplicationContext(), WriteNoticeBoard.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n        button_ad.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent =new Intent(getApplicationContext(), Advertise.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n        button_information.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent =new Intent(getApplicationContext(), Information.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n        MainToSetting.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent =new Intent(getApplicationContext(), SettingMain.class);\r\n                //Intent intent =new Intent(getApplicationContext(), SignUp.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n\r\n\r\n        //TODO bottom navigation fragments 세팅\r\n    }\r\n\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/woorimaeul/MainActivity.java	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/src/main/java/com/example/woorimaeul/MainActivity.java	(date 1606317872329)
+@@ -5,18 +5,27 @@
+ import android.annotation.SuppressLint;
+ import android.content.Intent;
+ import android.os.Bundle;
++import android.os.Handler;
+ import android.view.View;
+ import android.widget.Button;
+ import android.widget.ImageButton;
+ import android.widget.LinearLayout;
+ 
+ import com.example.woorimaeul.upload.WriteNoticeBoard;
++import com.hanks.htextview.base.HTextView;
++
++import java.util.ArrayList;
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
+     LinearLayout button_emergency, button_free, button_ad, button_information;
+     ImageButton MainToSetting;
+ 
++    private HTextView animatedLogo;
++    private ArrayList<String> arrMessages = new ArrayList<>();
++    private int delay = 3500;
++    private Handler handler;
++    private int position = 0;
+ 
+     @SuppressLint("WrongViewCast")
+     @Override
+@@ -31,6 +40,27 @@
+         button_information = findViewById(R.id.board_info);
+         MainToSetting = findViewById(R.id.main_to_setting);
+ 
++        /*
++        animatedLogo = findViewById(R.id.fallTextviewLogo);
++        arrMessages.add("Woori Maeul");
++        arrMessages.add("HM");
++        arrMessages.add("Fastest Menu");
++        arrMessages.add("FM");
++        animatedLogo.animateText(arrMessages.get(position));
++        position++;
++
++        handler = new Handler();
++        handler.postDelayed(new Runnable() {
++            @Override
++            public void run() {
++                handler.postDelayed(this, delay);
++                if(position>=arrMessages.size())
++                    position = 0;
++                animatedLogo.animateText(arrMessages.get(position));
++                position++;
++            }
++        }, delay);
++*/
+         button_emergency.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\r\napply plugin: 'com.google.gms.google-services'\r\n\r\nandroid {\r\n    compileSdkVersion 30\r\n    buildToolsVersion \"30.0.1\"\r\n\r\n    defaultConfig {\r\n        applicationId \"com.example.woorimaeul\"\r\n        minSdkVersion 26\r\n        targetSdkVersion 30\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation fileTree(dir: \"libs\", include: [\"*.jar\"])\r\n    implementation 'androidx.appcompat:appcompat:1.2.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'\r\n    implementation 'com.google.firebase:firebase-database:19.5.1' // firebase\r\n    implementation 'com.google.firebase:firebase-auth:20.0.1'\r\n    testImplementation 'junit:junit:4.13.1'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.2'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'\r\n    //implementation 'com.google.android.material:material:1.2.1'\r\n    implementation 'com.android.support:design:30.0.0' // bottomNavigationView\r\n    implementation 'androidx.recyclerview:recyclerview:1.1.0' //리사이클러뷰\r\n\r\n    /*여기 아래서부터는 FirebaseAuth작업관련*/\r\n    // Import the BoM for the Firebase platform\r\n    implementation platform('com.google.firebase:firebase-bom:26.0.0')\r\n\r\n    // Declare the dependency for the Firebase Authentication library\r\n    // When using the BoM, you don't specify versions in Firebase library dependencies\r\n    implementation 'com.google.firebase:firebase-auth'\r\n    /*위에까지 Firebase Auth*/\r\n}\r\n\r\ntasks.register(\"prepareKotlinBuildScriptModel\"){}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/build.gradle	(date 1606315623731)
+@@ -44,6 +44,12 @@
+     // When using the BoM, you don't specify versions in Firebase library dependencies
+     implementation 'com.google.firebase:firebase-auth'
+     /*위에까지 Firebase Auth*/
++
++    //Textview animation
++    implementation "com.hanks:htextview-base:0.1.6"
++    implementation "com.hanks:htextview-typer:0.1.6" //typer
++    implementation "com.hanks:htextview-fall:0.1.6" //fall
++    implementation "com.hanks:htextview-evaporate:0.1.6" //evaporate
+ }
+ 
+ tasks.register("prepareKotlinBuildScriptModel"){}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/floralwhite\"\r\n    tools:context=\".MainActivity\"\r\n    >\r\n    <LinearLayout\r\n        android:id=\"@+id/main_topLinear\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"50dp\"\r\n        android:layout_margin=\"10dp\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <ImageView\r\n\r\n            android:layout_width=\"36dp\"\r\n            android:layout_height=\"36dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:src=\"@drawable/wooriicon\" />\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"10dp\"\r\n            android:layout_weight=\"1\" />\r\n\r\n\r\n        <TextView\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\"Woori Town\"\r\n            android:textColor=\"@android:color/holo_blue_light\"\r\n            android:textSize=\"40sp\" />\r\n\r\n        <!--\"Woori Town\"글자와 회원이미지 클릭 사이에 들어갈 공백-->\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"0dp\"\r\n            android:layout_weight=\"1\" />\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/main_to_setting\"\r\n            android:layout_width=\"50dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:background=\"@color/floralwhite\"\r\n            android:foreground=\"@drawable/selectable_background\"\r\n            android:scaleType=\"centerCrop\"\r\n            android:src=\"@drawable/pictogram_user\" />\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/board_emergency\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"20dp\"\r\n        android:layout_marginTop=\"25dp\"\r\n        android:layout_marginEnd=\"20dp\"\r\n        android:background=\"@drawable/main_emergency_custom\"\r\n        android:orientation=\"vertical\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/main_topLinear\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\"\r\n        android:foreground=\"@drawable/selectable_background\"\r\n        >\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginTop=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:gravity=\"center\"\r\n            android:text=\"긴급게시판\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"30sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:layout_marginBottom=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\"청주에서 코로나 환자 급증으로 3단계 격상..\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/board_free\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"20dp\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"20dp\"\r\n        android:background=\"@drawable/main_board_custom\"\r\n        android:orientation=\"vertical\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/board_emergency\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\"\r\n        android:foreground=\"@drawable/selectable_background\"\r\n        >\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginTop=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:gravity=\"center\"\r\n            android:text=\"자유게시판\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"30sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\" - 청주 순대국밥 어디가 맛있나요?\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:layout_marginBottom=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\" - 커피 한 잔 마시고 일 시작해요\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/board_ad\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"20dp\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"20dp\"\r\n        android:background=\"@drawable/main_board_custom\"\r\n        android:orientation=\"vertical\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/board_free\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\"\r\n        android:foreground=\"@drawable/selectable_background\"\r\n        >\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginTop=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:gravity=\"center\"\r\n            android:text=\"홍보게시판\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"30sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\" - 농협 하나로 배추 20% 할인!\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:layout_marginBottom=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\" - 성안길 교촌 홀서빙 구합니다.\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n    </LinearLayout>\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/board_info\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginStart=\"20dp\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:layout_marginEnd=\"20dp\"\r\n        android:background=\"@drawable/main_board_custom\"\r\n        android:orientation=\"vertical\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/board_ad\"\r\n        android:clickable=\"true\"\r\n        android:focusable=\"true\"\r\n        android:foreground=\"@drawable/selectable_background\"\r\n        >\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginTop=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:gravity=\"center\"\r\n            android:text=\"정보게시판\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"30sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\" - 시립미술관에서 홍길동작가 전시하네요\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:layout_marginStart=\"10dp\"\r\n            android:layout_marginEnd=\"10dp\"\r\n            android:layout_marginBottom=\"10dp\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\" - 충북대 스타벅스에 확진자 다녀갔어요\"\r\n            android:textColor=\"@color/slategray\"\r\n            android:textSize=\"18sp\" />\r\n    </LinearLayout>\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_main.xml	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/src/main/res/layout/activity_main.xml	(date 1606317861457)
+@@ -14,10 +14,12 @@
+         android:layout_margin="10dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent">
++        app:layout_constraintTop_toTopOf="parent"
++        app:layout_constraintBottom_toTopOf="@id/board_emergency"
++        android:orientation="horizontal"
++        android:gravity="center_vertical">
+ 
+         <ImageView
+-
+             android:layout_width="36dp"
+             android:layout_height="36dp"
+             android:layout_gravity="center"
+@@ -27,15 +29,26 @@
+             android:layout_height="10dp"
+             android:layout_weight="1" />
+ 
+-
+-        <TextView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center"
+-            android:fontFamily="@font/jalnan"
+-            android:text="Woori Town"
+-            android:textColor="@android:color/holo_blue_light"
+-            android:textSize="40sp" />
++        <!--
++          <com.hanks.htextview.evaporate.EvaporateTextView
++              android:id="@+id/fallTextviewLogo"
++              android:layout_width="wrap_content"
++              android:layout_height="53dp"
++              android:gravity="center"
++              android:paddingTop="8dp"
++              android:textSize="36sp"
++              android:textColor="@color/black"
++              android:text="Woori Maeul"
++              />
++              -->
++                  <TextView
++                      android:layout_width="wrap_content"
++                      android:layout_height="wrap_content"
++                      android:layout_gravity="center"
++                      android:fontFamily="@font/jalnan"
++                      android:text="Woori Town"
++                      android:textColor="@android:color/holo_blue_light"
++                      android:textSize="40sp" />
+ 
+         <!--"Woori Town"글자와 회원이미지 클릭 사이에 들어갈 공백-->
+         <View
+Index: app/src/main/res/layout/list_bord.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout\r\n    xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"wrap_content\"\r\n    android:background=\"@color/floralwhite\"\r\n    >\r\n\r\n    <LinearLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:orientation=\"vertical\"\r\n        app:layout_constraintTop_toTopOf=\"parent\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        tools:ignore=\"MissingConstraints\"\r\n        >\r\n\r\n        <TextView\r\n            android:id=\"@+id/board_title\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_margin=\"5dp\"\r\n            android:text=\"제목\"\r\n            android:textColor=\"@color/black\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/username\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_margin=\"5dp\"\r\n            android:text=\"아이디\"\r\n            android:textColor=\"@color/black\" />\r\n\r\n    </LinearLayout>\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/list_bord.xml	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/src/main/res/layout/list_bord.xml	(date 1606316312191)
+@@ -24,7 +24,9 @@
+             android:layout_height="wrap_content"
+             android:layout_margin="5dp"
+             android:text="제목"
+-            android:textColor="@color/black" />
++            android:textColor="@color/black"
++            android:fontFamily="@font/jalnan"
++            android:textSize="20sp"/>
+ 
+         <TextView
+             android:id="@+id/username"
+@@ -32,7 +34,10 @@
+             android:layout_height="wrap_content"
+             android:layout_margin="5dp"
+             android:text="아이디"
+-            android:textColor="@color/black" />
++            android:textColor="@color/gray"
++            android:fontFamily="@font/jalnan"
++            android:textSize="16sp"
++            />
+ 
+     </LinearLayout>
+ 
+Index: app/src/main/res/layout/board.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/floralwhite\"\r\n    tools:context=\".MainActivity\">\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/main_topLinear\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"50dp\"\r\n        android:layout_margin=\"10dp\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n        <ImageView\r\n            android:layout_width=\"24dp\"\r\n            android:layout_height=\"36dp\"\r\n            android:layout_gravity=\"center\"\r\n            android:src=\"@drawable/wooriicon\" />\r\n\r\n        <TextView\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_gravity=\"center\"\r\n            android:fontFamily=\"@font/jalnan\"\r\n            android:text=\"Woori Town\"\r\n            android:textColor=\"@color/darkgreen\"\r\n            android:textSize=\"40sp\" />\r\n\r\n        <!--\"Woori Town\"글자와 회원이미지 클릭 사이에 들어갈 공백-->\r\n        <View\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"0dp\"\r\n            android:layout_weight=\"1\" />\r\n\r\n        <ImageButton\r\n            android:layout_width=\"50dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:background=\"@color/floralwhite\"\r\n            android:foreground=\"@drawable/selectable_background\"\r\n            android:scaleType=\"centerCrop\"\r\n            android:src=\"@drawable/pictogram_user\" />\r\n    </LinearLayout>\r\n\r\n\r\n    <TextView\r\n        android:id=\"@+id/board_name\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:layout_marginTop=\"5dp\"\r\n        android:fontFamily=\"@font/jalnan\"\r\n        android:gravity=\"center\"\r\n        android:text=\"자유게시판\"\r\n        android:textColor=\"@color/black\"\r\n        android:textSize=\"30sp\"\r\n        app:layout_constraintBottom_toTopOf=\"@id/recyclerView\"\r\n        app:layout_constraintHorizontal_bias=\"0.0\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/main_topLinear\" />\r\n\r\n    <LinearLayout\r\n        android:id=\"@+id/recyclerView\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        app:layout_constraintTop_toBottomOf=\"@id/board_name\"\r\n        app:layout_constraintLeft_toLeftOf=\"parent\"\r\n        app:layout_constraintRight_toRightOf=\"parent\"\r\n        >\r\n\r\n        <androidx.recyclerview.widget.RecyclerView\r\n            android:id=\"@+id/BoardRecyclerView\"\r\n            android:layout_width=\"400dp\"\r\n            android:layout_height=\"match_parent\" />\r\n\r\n    </LinearLayout>\r\n\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/board.xml	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/src/main/res/layout/board.xml	(date 1606316833318)
+@@ -14,7 +14,8 @@
+         android:layout_margin="10dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent">
++        app:layout_constraintTop_toTopOf="parent"
++        android:gravity="center">
+ 
+         <ImageView
+             android:layout_width="24dp"
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"colorPrimary\">#6200EE</color>\r\n    <color name=\"colorPrimaryDark\">#3700B3</color>\r\n    <color name=\"colorAccent\">#03DAC5</color>\r\n    <color name=\"white\">#FFFFFF</color>\r\n    <color name=\"black\">#000000</color>\r\n    <color name=\"lightblue\">#9bc2ee</color>\r\n    <color name=\"palegreen\">#98FB98</color>\r\n    <color name=\"lightgreen\">#90EE90</color>\r\n    <color name=\"lightcyan\">#E0FFFF</color>\r\n    <color name=\"floralwhite\">#FFFAF0</color>\r\n    <color name=\"darkorange\">#FF8C00</color>\r\n    <color name=\"darkgreen\">#006400</color>\r\n    <color name=\"slategray\">#708090</color>\r\n    <color name=\"crimson\">#DC143C</color>\r\n    <color name=\"blue\">#0067a3</color>\r\n\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/colors.xml	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/src/main/res/values/colors.xml	(date 1606316361982)
+@@ -15,5 +15,7 @@
+     <color name="slategray">#708090</color>
+     <color name="crimson">#DC143C</color>
+     <color name="blue">#0067a3</color>
++    <color name="gray">#AEAEAE</color>
++
+ 
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/com/example/woorimaeul/board.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.woorimaeul;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.annotation.Nullable;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.google.firebase.database.DataSnapshot;\r\nimport com.google.firebase.database.DatabaseError;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\nimport com.google.firebase.database.ValueEventListener;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class board extends AppCompatActivity {\r\n\r\n\r\n    private RecyclerView recyclerView;\r\n    private RecyclerView.Adapter adapter;\r\n    private RecyclerView.LayoutManager layoutManager;\r\n    private ArrayList<BoardList> arrayList;\r\n    private FirebaseDatabase database;\r\n    private DatabaseReference databaseReference;\r\n\r\n\r\n\r\n    @SuppressLint(\"WrongViewCast\")\r\n    @Override\r\n    protected void onCreate(@Nullable Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.board);\r\n\r\n\r\n\r\n        recyclerView = findViewById(R.id.BoardRecyclerView);  // 아이디 연결\r\n        recyclerView.setHasFixedSize(true); //리사이클러뷰 기존 성능 강화\r\n        layoutManager = new LinearLayoutManager(this);\r\n        recyclerView.setLayoutManager(layoutManager);\r\n        arrayList = new ArrayList<>(); // BoardList 객체를 담을 어레이 리스트(어뎁터 쪽으로)\r\n\r\n        database  = FirebaseDatabase.getInstance(); //파이어베이스 데이터베이스 연동\r\n\r\n        databaseReference = database.getReference(\"BoardList\"); //DB 테이블 연결\r\n        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {\r\n            @Override\r\n            public void onDataChange(@NonNull DataSnapshot datasnapshot) {\r\n                //파이어베이스 데이터베이스의 데이터를 받아오는 곳\r\n                arrayList.clear();  //기존 배열 리스트가 존재하지 않게 초기화\r\n\r\n                for (DataSnapshot snapshot : datasnapshot.getChildren()){   //반복문으로 데이터 list 추출\r\n                    BoardList boardList = snapshot.getValue(BoardList.class);   //만들어둔 BoardList 객체에 데이터를 담는다\r\n                    arrayList.add(boardList);   //담은 데이터를 배열리스트에 넣고 리사이클러로 보낼준비\r\n                }\r\n                System.out.println(\"@@@@\"+arrayList.size());\r\n                adapter.notifyDataSetChanged(); //리스트 저장 및 새로 고침\r\n            }\r\n\r\n            @Override\r\n            public void onCancelled(@NonNull DatabaseError error) {\r\n                //디비를 가져오던 중 에러 발생 시\r\n                Log.e(\"board\", String.valueOf(error.toException())); //에러문 출력\r\n            }\r\n        });\r\n\r\n        adapter = new CustomAdapter(arrayList, this);\r\n        recyclerView.setAdapter(adapter); //리사이클러뷰에 어뎁터 연결\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/woorimaeul/board.java	(revision bc67934b2bef1efbecb590edf7f54a7fd9ff42aa)
++++ app/src/main/java/com/example/woorimaeul/board.java	(date 1606316846521)
+@@ -2,6 +2,7 @@
+ 
+ import android.annotation.SuppressLint;
+ import android.os.Bundle;
++import android.os.Handler;
+ import android.util.Log;
+ 
+ import androidx.annotation.NonNull;
+@@ -15,6 +16,7 @@
+ import com.google.firebase.database.DatabaseReference;
+ import com.google.firebase.database.FirebaseDatabase;
+ import com.google.firebase.database.ValueEventListener;
++import com.hanks.htextview.base.HTextView;
+ 
+ import java.util.ArrayList;
+ 
+@@ -28,16 +30,12 @@
+     private FirebaseDatabase database;
+     private DatabaseReference databaseReference;
+ 
+-
+-
+     @SuppressLint("WrongViewCast")
+     @Override
+     protected void onCreate(@Nullable Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.board);
+ 
+-
+-
+         recyclerView = findViewById(R.id.BoardRecyclerView);  // 아이디 연결
+         recyclerView.setHasFixedSize(true); //리사이클러뷰 기존 성능 강화
+         layoutManager = new LinearLayoutManager(this);

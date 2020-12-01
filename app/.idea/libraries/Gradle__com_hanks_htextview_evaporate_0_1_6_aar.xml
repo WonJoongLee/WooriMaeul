@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.hanks:htextview-evaporate:0.1.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7abd7635d52f1a3f8f1f25c9d98f6e25/jetified-htextview-evaporate-0.1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7abd7635d52f1a3f8f1f25c9d98f6e25/jetified-htextview-evaporate-0.1.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7abd7635d52f1a3f8f1f25c9d98f6e25/jetified-htextview-evaporate-0.1.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hanks/htextview-evaporate/0.1.6/fb6ad7db216abe866d09e427d7327c40b2d12ffa/htextview-evaporate-0.1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.hanks/htextview-evaporate/0.1.6/b51c55000568eadb05733cb7a39032838db15012/htextview-evaporate-0.1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
