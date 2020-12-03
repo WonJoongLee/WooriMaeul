@@ -11,6 +11,8 @@
 + 긴급게시판을 제외한 모든 게시판에서 사용자들은 글과 댓글 작성 가능
 + 시청에서 알려야 할 중요사항 신속하게 주민들에게 전파 가능   
 
+## 소개 및 사용영상
+링크 : https://www.youtube.com/watch?v=K12j8sSWqV4&feature=youtu.be   
 
 ## 사용방법
 1. 우측 상단의 사람 모양의 아이콘을 눌러 회원가입 및 로그인 화면으로 이동   
@@ -22,7 +24,11 @@
 <img src="https://user-images.githubusercontent.com/62466374/100635537-fa634f00-3373-11eb-9063-8727bcb78e2b.png" width="30%" height="30%"></img>
 3. 자유로운 게시글 작성   
 <img src="https://user-images.githubusercontent.com/62466374/100636075-a6a53580-3374-11eb-9b53-7346f6c3dbdd.png" width="30%" height="30%"></img>
-<img src="https://user-images.githubusercontent.com/62466374/100636084-a86ef900-3374-11eb-9675-6c0ec6a6cebd.png" width="30%" height="30%"></img>
-+ __주의사항__ : 로그인을 하지 않으면 글을 작성할 수 없습니다.   
+<img src="https://user-images.githubusercontent.com/62466374/100636084-a86ef900-3374-11eb-9675-6c0ec6a6cebd.png" width="30%" height="30%"></img>   
+:heavy_exclamation_mark: __주의사항__ :heavy_exclamation_mark: 로그인을 하지 않으면 글을 작성할 수 없습니다.   
 <img src="https://user-images.githubusercontent.com/62466374/100636159-c0467d00-3374-11eb-905a-b8a4a8e5620e.jpg" width="30%" height="30%"></img>
 
+
+## 개발자
+
+이원중(C), 김정호, 김종석, 유성현
